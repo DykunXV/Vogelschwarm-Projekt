@@ -9,4 +9,4 @@ Adds an animated flock of birds into the current scene
   4. That's it. The addon should be working now and you should see a "AFOB Util" Panel.
 
 ## Important information
-For some reason, if I open Blender without the VS-Code Debugging tool, I get an error when loading the textures. If that is the case for you too, I'd advise to open the addon with the VS-Code Debugging tool.
+For some reason, if I open Blender without the VS-Code Debugging tool, I get an error when loading the textures. If that is the case for you too, I'd advise to open the addon with the VS-Code Debugging tool as I sadly found no other solution to this problem.
