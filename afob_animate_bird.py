@@ -4,12 +4,13 @@ from bpy.types import Operator
 class AFOB_OT_Animate_Bird_Op(Operator):
     bl_idname = "object.animate_bird"
     bl_label = "Animate bird"
-    bl_description = "Animate bird"
+    bl_description = "Animate the bird."
     
     starting_frame = 1
     ending_frame = 200
 
     def execute(self, context):
+        #needed for user input
         scene = context.scene
         mytool = scene.my_tool
 

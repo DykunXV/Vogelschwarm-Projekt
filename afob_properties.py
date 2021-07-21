@@ -1,10 +1,9 @@
 import bpy
 
 class AFOB_Properties(bpy.types.PropertyGroup):
-    
     bird_species : bpy.props.EnumProperty(
         name= "Species",
-        description= "Choose bird species",
+        description= "Choose a bird species.",
         items= [('OP1', "Original", ""),
                 ('OP2', "Black Tern", ""),
                 ('OP3', "Bullfinch", "")
@@ -21,7 +20,7 @@ class AFOB_Properties(bpy.types.PropertyGroup):
 
     amount_of_birds : bpy.props.EnumProperty(
         name= "Amount of birds",
-        description= "Choose amount of birds",
+        description= "Choose amount of birds.",
         items= [('OP1', "Few", ""),
                 ('OP2', "Normal", ""),
                 ('OP3', "Many", "") #for some reason choosing this option leads to a bug that some birds of the flock are missing their body and vice versa. a workaround would be joining body and wings, but that is not what im looking for
@@ -29,4 +28,3 @@ class AFOB_Properties(bpy.types.PropertyGroup):
     )
 
     bird_spacing : bpy.props.FloatProperty(name= "Spacing of the birds", default=1, soft_min= 1, soft_max= 3)
-    

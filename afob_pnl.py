@@ -7,15 +7,12 @@ class AFOB_PT_Panel_Bird(Panel):
     bl_category = "AFOB Util"
 
     def draw(self, context):
-
         layout = self.layout
-        scene = context.scene
-        mytool = scene.my_tool
 
         row = layout.row()
         col = row.column()
         col.scale_y = 2.0
-        col.operator("object.generate_bird", text="Generate bird")
+        col.operator("object.generate_bird", text="1. Generate bird")
 
 class AFOB_PT_Panel_Texture(Panel):
     bl_space_type = "VIEW_3D"
@@ -24,7 +21,6 @@ class AFOB_PT_Panel_Texture(Panel):
     bl_category = "AFOB Util"
 
     def draw(self, context):
-
         layout = self.layout
         scene = context.scene
         mytool = scene.my_tool
@@ -35,7 +31,7 @@ class AFOB_PT_Panel_Texture(Panel):
         row = layout.row()
         col = row.column()
         col.scale_y = 2.0
-        col.operator("object.texture_bird", text="Texture bird")
+        col.operator("object.texture_bird", text="2. Texture bird")
 
 class AFOB_PT_Panel_Animation(Panel):
     bl_space_type = "VIEW_3D"
@@ -44,7 +40,6 @@ class AFOB_PT_Panel_Animation(Panel):
     bl_category = "AFOB Util"
 
     def draw(self, context):
-
         layout = self.layout
         scene = context.scene
         mytool = scene.my_tool
@@ -57,7 +52,7 @@ class AFOB_PT_Panel_Animation(Panel):
         row = layout.row()
         col = row.column()
         col.scale_y = 2.0
-        col.operator("object.animate_bird", text="Animate bird")
+        col.operator("object.animate_bird", text="3. Animate bird")
 
 
 class AFOB_PT_Panel_Flock(Panel):
@@ -67,7 +62,6 @@ class AFOB_PT_Panel_Flock(Panel):
     bl_category = "AFOB Util"
 
     def draw(self, context):
-
         layout = self.layout
         scene = context.scene
         mytool = scene.my_tool
@@ -80,5 +74,4 @@ class AFOB_PT_Panel_Flock(Panel):
         row = layout.row()
         col = row.column()
         col.scale_y = 2.0
-        col.operator("object.multiply_bird", text="Multiply bird")
-        
+        col.operator("object.multiply_bird", text="4. Multiply bird")

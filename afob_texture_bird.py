@@ -4,9 +4,10 @@ from bpy.types import Operator
 class AFOB_OT_Texture_Bird_Op(Operator):
     bl_idname = "object.texture_bird"
     bl_label = "Texture bird"
-    bl_description = "Texture bird"
+    bl_description = "Gives the bird a texture."
 
     def execute(self, context):
+        #needed for user input
         scene = context.scene
         mytool = scene.my_tool
 
@@ -73,7 +74,6 @@ class AFOB_OT_Texture_Bird_Op(Operator):
         bpy.ops.object.shade_smooth()
         
         #add image texture node 
-        wingsTexture.node_tree #TODO - needed?
         wingsTexture.use_nodes = True
         nodes = wingsTexture.node_tree.nodes
         shaderNode = nodes.new("ShaderNodeTexImage")    

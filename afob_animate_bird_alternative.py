@@ -1,4 +1,4 @@
-## THIS IS THE LOGIC I WOULD HAVE USED FOR EVERY BIRD TO HAVE A DIFFERENT ANIMATION, IF THIS WOULDNT LEAD TO A BUG WHICH I SADLY CANT FIX IN TIME
+## THIS IS THE NOW OUTDATED LOGIC I WOULD HAVE USED FOR EVERY BIRD TO HAVE A DIFFERENT ANIMATION, IF THIS WOULDNT LEAD TO A BUG WHICH I SADLY CANT FIX IN TIME
 
 import bpy
 from bpy.types import Operator
@@ -13,7 +13,6 @@ class AFOB_OT_Animate_Bird_Op(Operator):
     animation_offset: int = 0
 
     def execute(self, context):
-
         #deform modifier
         bpy.ops.object.select_all(action='DESELECT')
         bpy.data.objects['Wings'].select_set(True)

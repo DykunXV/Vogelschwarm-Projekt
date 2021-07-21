@@ -1,13 +1,13 @@
 import bpy
 from bpy.types import Operator
-from random import *
 
 class AFOB_OT_Multiply_Bird_Op(Operator):
     bl_idname = "object.multiply_bird"
     bl_label = "Multiply bird"
-    bl_description = "Multiply bird"
+    bl_description = "Multiply the bird to create a flock."
 
     def execute(self, context):
+        #needed for user input
         scene = context.scene
         mytool = scene.my_tool
 
@@ -15,7 +15,6 @@ class AFOB_OT_Multiply_Bird_Op(Operator):
         if bpy.data.collections.get('AFOB Particles'):
             bpy.data.collections.remove(bpy.data.collections.get('AFOB Particles'))
         
-
         #select every object in the bird collection and hide it
         bpy.ops.object.select_all(action='DESELECT')
         for obj in bpy.data.collections['AFOB Bird Collection'].all_objects:
@@ -78,7 +77,7 @@ class AFOB_OT_Multiply_Bird_Op(Operator):
         bpy.data.objects['AFOB_Icosphere'].select_set(True)
         bpy.context.object.modifiers["Displace"].texture_coords_object = bpy.data.objects["AFOB_Empty_Ico"]
 
-        #add particle system if not already existing and change settings
+        #add particle system and change settings
         object = bpy.context.object
         object.modifiers.new(name='AFOB_Particle_System',type='PARTICLE_SYSTEM').name
         bpy.context.object.particle_systems['AFOB_Particle_System'].settings.name = 'AFOB_ParticleSettings'

@@ -4,7 +4,7 @@ from bpy.types import Operator
 class AFOB_OT_Generate_Bird_Op(Operator):
     bl_idname = "object.generate_bird"
     bl_label = "Generate bird"
-    bl_description = "Generate bird"
+    bl_description = "Generate a bird."
 
     #these values were supposed to be changable in the panel, but this would have created problems with the textures, as the textures are not dynamically created.
     bird_length: float = 2
@@ -12,7 +12,6 @@ class AFOB_OT_Generate_Bird_Op(Operator):
     bird_height: float = 0.8
 
     def execute(self, context):
-
         #generate collection and set active
         collection = bpy.data.collections.new('AFOB Bird Collection')
         bpy.context.scene.collection.children.link(collection)
@@ -112,7 +111,7 @@ class AFOB_OT_Generate_Bird_Op(Operator):
         bpy.ops.mesh.loopcut_slide(MESH_OT_loopcut={"number_cuts":1, "smoothness":0, "falloff":'INVERSE_SQUARE', "object_index":0, "edge_index":61, "mesh_select_mode_init":(True, False, False)}, TRANSFORM_OT_edge_slide={"value":0, "single_side":False, "use_even":False, "flipped":False, "use_clamp":True, "mirror":True, "snap":False, "snap_target":'CLOSEST', "snap_point":(0, 0, 0), "snap_align":False, "snap_normal":(0, 0, 0), "correct_uv":True, "release_confirm":False, "use_accurate":False})
         bpy.ops.object.editmode_toggle()
 
-        #TODO - make wings look like wings
+        #make wings look like wings
         clear_selection()
         me.polygons[2].select = True
         me.polygons[26].select = True
