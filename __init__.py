@@ -6,7 +6,7 @@ bl_info = {
     "version" : (0, 0, 1),
     "location" : "View3D",
     "warning" : "",
-    "category" : "Object"
+    "category" : "Animation"
 }
 
 import bpy
